@@ -1,0 +1,30 @@
+﻿a) What is the difference between Internal Storage & External Storage?
+
+Internal storage:
+•It's always available.
+•Files saved here are accessible by only your app.
+•When the user uninstalls your app, the system removes all your app's files from internal storage.
+
+External storage:
+•It's not always available, because the user can mount the external storage as USB storage and in some cases remove it from the device.
+•It's world-readable, so files saved here may be read outside of your control.
+•When the user uninstalls your app, the system removes your app's files from here only if you save them in the directory from getExternalFilesDir().
+
+b) For how long the data resides in the cache?
+
+Data in cache remains till the time user is not clearing the cache or clear data from the settings. 
+If data in cache is stored through server side then we can code in our app for how long we want the data to stay in cache or it can be return from server side as well in headers.
+
+C) What are the critical Permissions and Normal Permissions? What are the examples of each?
+
+Normal Permissions:
+
+Normal permissions cover areas where your app needs to access data or resources outside the app's sandbox, but where there's very little risk to the user's privacy or the operation of other apps. For example, permission to set the time zone is a normal permission. If an app declares that it needs a normal permission, the system automatically grants the permission to the app. For a full listing of the current normal permissions, see Normal permissions.
+
+Critical Permissions:
+
+Critical permissions cover areas where the app wants data or resources that involve the user's private information, or could potentially affect the user's stored data or the operation of other apps. For example, the ability to read the user's contacts is a dangerous permission. If an app declares that it needs a dangerous permission, the user has to explicitly grant the permission to the app.
+
+
+
+
